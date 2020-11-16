@@ -3,10 +3,14 @@
 const express = require('express');
 const app = express();
 
-// create at least 1 route
+app.set('view engines', 'ejs');
+
+
+
+// create our routes
 
 app.get('/', (req, res) => {
-    res.send('hello from faves-and-hates')
+    res.render('index.ejs')
 })
 
 // app.listen
@@ -14,3 +18,10 @@ app.get('/', (req, res) => {
 app.listen(8000, () => {
     console.log('server has started');
 })
+
+
+// make a views dir
+ // put an ejs file in it
+
+// set view engine
+// change send to render
